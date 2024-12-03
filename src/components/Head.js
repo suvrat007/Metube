@@ -49,24 +49,24 @@ const Head = () => {
 
 
     return (
-        <div className="grid grid-flow-col p-5 m-2 shadow-lg rounded-b-lg">
+        <div className="grid grid-flow-col p-3 m-2 shadow-lg rounded-b-lg">
             <div className="flex col-span-1 ">
                 <img alt="menu"
                      onClick={()=> toggleMenuHandler()}
-                     className="w-8 cursor-pointer " src={Hamburger_Icon}/>
-                <img alt="menu" className="h-8 mx-2" src={Youtube_Logo}/>
+                     className="w-7 h-7 cursor-pointer " src={Hamburger_Icon}/>
+                <img alt="menu" className="h-7 pl-2 mx-1 " src={Youtube_Logo}/>
             </div>
-            <div className="col-span-10 px-10">
+            <div className="col-span-10 px-10 ml-40">
                 <div>
                     <input
-                        className=" px-5 w-1/2 border border-gray-400 p-2 rounded-l-3xl"
+                        className=" px-5 w-1/2 border border-gray-400 p-1 rounded-l-3xl"
                         type="text"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e?.target?.value)}
                         onFocus={() => setShowSuggestions(true)}
                         onBlur={() => setShowSuggestions(false)}
                     />
-                    <button className="border border-gray-400 px-5 py-2 bg-gray-100 rounded-r-3xl">&#128269;</button>
+                    <button className="border border-gray-400 px-5 py-1 bg-gray-100 rounded-r-3xl">&#128269;</button>
                 </div>
 
                 { showSuggestions && (
@@ -80,8 +80,8 @@ const Head = () => {
                 )}
             </div>
 
-            <div className="flex col-span-2">
-                <img alt="user" className="h-8" src={User_Icon}/>
+            <div className="flex col-span-2 ">
+                <img alt="user" className="h-8 " src={User_Icon}/>
             </div>
 
         </div>

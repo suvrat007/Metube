@@ -25,14 +25,14 @@ const LiveChatButton = () =>{
 
     return (
         <>
-            <div className="ml-2 w-full h-[500px] p-4 border border-black bg-slate-100 rounded-lg overflow-y-scroll flex flex-col-reverse">
+            <div className="ml-4 w-[90%] h-[500px] p-4 border border-black bg-slate-100 rounded-lg overflow-y-scroll flex flex-col-reverse">
                 <div>
                     {chatMessages.map((m, index) => (
                     <ChatMessage key={index} name={m.name} message={m.message} />
                 ))}
                 </div>
             </div>
-            <form className="w-full p-2 ml-2 border border-black rounded-lg flex" onSubmit={(e)=>{
+            <form className="w-[90%] p-2 ml-4 border border-black rounded-lg flex" onSubmit={(e)=>{
                 e.preventDefault();
                 dispatch(addMessage({
                     name: "you",
